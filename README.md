@@ -63,6 +63,9 @@ online at http://ieeexplore.ieee.org.
 Digital Object Identifier 10.1109/JSEN.2014.2381363
 
 
+![fr](https://user-images.githubusercontent.com/33089347/191128291-4cce6bc1-1c80-412a-a5f7-37c051a95043.PNG)
+
+
 A. Related Work
 Most research topics for hair image processing usually focus
 on hair modeling, creating a synthesis, and an animated global
@@ -92,3 +95,47 @@ with a color-similarity criteria. However, these aforementioned
 techniques do not take into consideration the condition of the
 hairs such as their health condition, density, diameter, oiliness,
 nor the number of hairs on each single follicle.
+
+Bright Spot Removal (BSR)
+In the image acquisition step, the oily and moist hair
+produces bright spots in the middle portions of the hair. The
+reason for the appearance of these oily spots is due to the light
+reflecting from the built-in LEDs of the DMC. The surfaces
+of the moist hair and the oily scalp reflect the supplementary
+light into the CMOS/CCD sensors of the DMC. This not
+only results in early sensing saturation, but also replaces the
+original color with a white spot. Thus we need to eliminate any
+bright spots prior to counting the hairs, and avoid the situation
+of “breaks” in the hairs. Unfortunately, it is impossible to
+precisely know the locations of all hair pixels before the hair
+is detected. To preserve the scalp information such as the
+intrinsic color pattern and skin texture for further applications,
+we utilized color morphological processing approach rather
+than the binary or gray-scale one for handling this kind
+of defect.
+
+There are many spatial filtering operators that can suppress
+the white spots. By treating a white spot as a salt and pepper
+noise (i.e., impulse noise), we can apply a nonlinear median
+filter to eliminate it. However, the size of the filtering mask is
+critical. Another approach is the spatial smooth filter, which
+can successfully reduce the intensity of the white spot. The
+drawback however is that the non-hair regions of the test
+image will also be blurred. 
+
+
+To solve these difficulties we used
+the color-based mathematical morphology (MM) method, and
+used it as an ordering process. The MM defines the correlation
+between pixels in the spatial structure, and compares the order.
+This however requires the ordering and analysis of multi-dimensions. In addition, a Red-Green-Blue (RGB) color image
+does not have a definite ordering pattern when compared
+to a gray scale image. Common sequential ordering can be
+classified into four categories [18] including Marginal-ordering
+(M-ordering), Conditional-ordering (C-ordering), Partial-ordering (P-ordering), and Reduced-ordering (R-ordering).
+Each ordering approach has its pros and cons. For instance,
+M-ordering is quick and simple but it is error prone when
+it comes to color accuracy, R-ordering decreases computation
+time, but it lacks integrity, and while C-ordering completely
+avoids the ambiguous situations caused by the sequential
+comparison error, it has a high computational complexity
