@@ -1,2 +1,2 @@
 # HairSplittingModel
- A simple dl model for point clusterizattion
+ A simple Deep Learning model for point clusterizattion
