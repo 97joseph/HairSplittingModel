@@ -30,7 +30,7 @@ diagnosis, hair follicle diagnosis, line segment detection.
 I. INTRODUCTION
 
 BIOMEDICAL image processing plays an important role
-in improving the accuracy of medical and cosmetic applications. An accurate medical image allows a doctor to make a
+in improving the accuracy of medical and cosmetic applications. An accurate medical image allows a doctor to make a
 more informed decision regarding the treatment of his patient.
 The image processing technology substantially improves the
 fields of health and medicine. For example, when investigating
