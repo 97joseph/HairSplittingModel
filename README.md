@@ -15,12 +15,15 @@ overlapping hairs are recognized and counted as a single hair.
 To solve this problem, we proposed a hair-bundling algorithm to
 calculate any concealed hairs. Finally, hairs may be wavy or curly,
 making the conventional Hough-based line detection algorithm
-unsuitable, since it suffers from parameter selections, such as
+unsuitable, since it suffers from parameter selections, such as![Screenshot (570)](https://user-images.githubusercontent.com/33089347/192128581-1e87a5ee-7fe0-4950-855a-a8c653e6fb16.png)
+
 the minimum length of line segment, and distance between line
 segments. Our proposed hair counting algorithm is substantially
 more accurate than the Hough-based one, and robust to curls,
 oily scalp, noise-corruption, and overlapping hairs, under various
 white balance.
+
+
 
 Index Terms— Hair counting, scalp diagnosis, hair care
 
